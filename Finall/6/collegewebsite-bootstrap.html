@@ -1,0 +1,160 @@
+<!-- Create a responsive web page for College website with top navbar and display
+toppers data statistics (year wise) in card using Bootstrap
+Section Content
+Title "Pune Institute of Computer Technology"
+Navigation
+Bar (Top
+Navbar)
+Bootstrap navbar with links: `Home
+Headings
+Welcome to XYZ College
+Our Achievements
+Year-Wise Toppers
+Toppers'
+Statistics
+(Cards)
+Bootstrap card layout (col-md-4) for each
+year's topper details (Name, Department,
+Percentage, Photo).
+Responsive - Cards adjust in a grid (col-md-4, col-
+Features sm-6, col-12). - Navbar collapses into a
+toggle menu on mobile.
+Footer
+Includes college address, contact details,
+and social media links.
+C6 Design and deploy a web application in a PaaS environment. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pune Institute of Computer Technology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS CDN -->
+  <link href="bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">PICT College</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Welcome</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Our Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Toppers</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="text-center my-4">
+  <h1>Pune Institute of Computer Technology</h1>
+  <p class="lead">Welcome to PICT College</p>
+</header>
+
+<!-- Toppers Statistics -->
+<div class="container">
+  <h3 class="text-center mb-4">Year-Wise Toppers</h3>
+  <div class="row g-4">
+
+    <!-- 2026 Toppers -->
+    <div class="col-md-4 col-sm-6 col-12">
+      <div class="card h-100">
+        <img src="#" class="card-img-top" alt="Topper 2026">
+        <div class="card-body">
+          <h5 class="card-title">Ishita Mehra</h5>
+          <p class="card-text">Department: Computer Engineering</p>
+          <p class="card-text">GPA: 10.0</p>
+          <p class="card-text">Year: 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-12">
+      <div class="card h-100">
+        <img src="#" class="card-img-top" alt="Topper 2026">
+        <div class="card-body">
+          <h5 class="card-title">Karan Joshi</h5>
+          <p class="card-text">Department: IT Engineering</p>
+          <p class="card-text">GPA: 10.0</p>
+          <p class="card-text">Year: 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-12">
+      <div class="card h-100">
+        <img src="#" class="card-img-top" alt="Topper 2026">
+        <div class="card-body">
+          <h5 class="card-title">Pooja Kulkarni</h5>
+          <p class="card-text">Department: E&TC Engineering</p>
+          <p class="card-text">GPA: 9.89</p>
+          <p class="card-text">Year: 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2025 Toppers -->
+    <div class="col-md-4 col-sm-6 col-12">
+      <div class="card h-100">
+        <img src="#" class="card-img-top" alt="Topper 2025">
+        <div class="card-body">
+          <h5 class="card-title">Arjun Nair</h5>
+          <p class="card-text">Department: Computer Engineering</p>
+          <p class="card-text">GPA: 9.95</p>
+          <p class="card-text">Year: 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-12">
+      <div class="card h-100">
+        <img src="#" class="card-img-top" alt="Topper 2025">
+        <div class="card-body">
+          <h5 class="card-title">Neha Salunkhe</h5>
+          <p class="card-text">Department: IT Engineering</p>
+          <p class="card-text">GPA: 9.96</p>
+          <p class="card-text">Year: 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-12">
+      <div class="card h-100">
+        <img src="#" class="card-img-top" alt="Topper 2025">
+        <div class="card-body">
+          <h5 class="card-title">Rohan Desai</h5>
+          <p class="card-text">Department: E&TC Engineering</p>
+          <p class="card-text">GPA: 9.50</p>
+          <p class="card-text">Year: 2025</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center mt-5 p-4">
+  <p>Pune Institute of Computer Technology</p>
+  <p>Address: Dhankawadi, Pune, Maharashtra - 411043</p>
+  <p>Email: info@pict.edu | Phone: +91-1234567890</p>
+  <div>
+    <a href="#" class="text-white me-2">Facebook</a> |
+    <a href="#" class="text-white mx-2">Twitter</a> |
+    <a href="#" class="text-white ms-2">Instagram</a>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="bootstrap@5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

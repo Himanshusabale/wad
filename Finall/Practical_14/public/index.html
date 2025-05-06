@@ -1,0 +1,23 @@
+
+<!-- Create a Node.js server that reads user data from a JSON file and serves it as an
+API. A front-end page should display the list dynamically using HTML &
+JavaScript.
+C14 Design and deploy a web application in a PaaS environment -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>User List</title></head>
+<body>
+
+  <h1>Users</h1>
+  <ul id="userList"></ul>
+  <script>
+    
+    fetch('/api/users')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('userList').innerHTML = 
+          data.map(u => `<li>${u.name} (${u.age})</li>`).join('');
+      });
+  </script>
+</body>
+</html>

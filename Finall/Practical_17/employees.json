@@ -1,0 +1,6 @@
+[
+    { "name": "Alice Smith", "designation": "Manager", "department": "HR", "salary": 75000, "image": "images/emp.jpg" },
+    { "name": "Bob Johnson", "designation": "Developer", "department": "IT", "salary": 85000, "image": "images/emp.jpg" },
+    { "name": "Charlie Brown", "designation": "Designer", "department": "Creative", "salary": 65000, "image": "images/emp.jpg" }
+  ]
+  

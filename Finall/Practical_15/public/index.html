@@ -1,0 +1,25 @@
+<!-- Build a product catalog where product details (name, price, image) are stored in a
+JSON file. The Node.js server should provide the data as an API for a front-end
+page to display products
+C15 Design and deploy a web application in a PaaS environment.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Product Catalog</title></head>
+<body>
+  <h1>Products</h1>
+  <div id="catalog"></div>
+  <script>
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('catalog').innerHTML = 
+          data.map(p => `
+            <div style="border:1px solid #ccc; padding:10px; margin:10px; width:150px">
+              <img src="${p.image}" width="150"><h3>${p.name}</h3><p>${p.price}</p> 
+            </div>
+          `).join('');
+      });
+  </script>
+</body>
+</html>

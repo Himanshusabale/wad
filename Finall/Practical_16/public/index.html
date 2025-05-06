@@ -1,0 +1,38 @@
+<!-- Create a Node.JS Application that serves as a static website for Restaurants/Art
+Gallary
+C16 Design and develop custom Application using Sales-force Cloud. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Our Place</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to Our Restaurant / Art Gallery</h1>
+  
+  <img src="images/banner.jpg" alt="Banner" width="600">
+  
+  <p>Experience the finest food and art in town!</p>
+
+  <h2>Our Menu</h2>
+  <ul id="menulist"></ul>
+  <script>
+    fetch('/api/menu')
+      .then(res => res.json())
+        .then(data =>{
+          document.getElementById('menulist').innerHTML =
+          data.map(u => `<li>${u.menu} - ${u.price}</li>`).join(''); 
+        });
+  </script>
+
+  <h2>Gallery</h2>
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <img src="images/banner.jpg" alt="Art 1" width="200">
+    <img src="images/banner.jpg" alt="Art 2" width="200">
+    <img src="images/banner.jpg" alt="Art 3" width="200">
+  </div>
+
+  <footer style="margin-top:30px;">© 2025 Our Restaurant / Art Gallery</footer>
+</body>
+</html>

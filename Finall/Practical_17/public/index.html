@@ -1,0 +1,32 @@
+<!-- Build an Employee Directory where employee details (name, designation,
+department, salary, and profile image) are stored in a JSON file. A Node.js server
+should provide this data as an API, and a front-end page should fetch and display
+employee details.
+C17 Design and develop custom Application using Sales-force Cloud -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Our Employees</h1>
+  <div id="employees" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;"></div>
+
+  <script>
+    fetch('/api/employees')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('employees').innerHTML = 
+          data.map(emp => `
+          <div style="border:1px solid #ccc; padding:10px; width:200px; text-align:center;">
+            <img src="${emp.image}" width="100" style="border-radius:50%;"><br>
+            <h3>${emp.name}</h3>
+            <p>${emp.designation}<br>${emp.department}<br>💲${emp.salary}</p>
+          </div>
+        `).join('');
+      });
+  </script>
+</body>
+</html>

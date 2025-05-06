@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Marks</title>
+  <style>
+    table { border-collapse: collapse; width: 80%; margin: auto; }
+    th, td { border: 1px solid #aaa; padding: 8px; text-align: center; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center">Total Students: <%= total %></h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Wad</th>
+        <th>Dsbda</th>
+        <th>Cns</th>
+        <th>CC</th>
+        <th>Ai</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% student.forEach(s => { %>
+        <tr>
+          <td><%= s.name %></td>
+          <td><%= s.roll %></td>
+          <td><%= s.wad %></td>
+          <td><%= s.dsbda %></td>
+          <td><%= s.cns %></td>
+          <td><%= s.cc %></td>
+          <td><%= s.ai %></td>
+          <td>
+            <a href="/delete/<%= s.name %>">Delete</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+</body>
+</html>

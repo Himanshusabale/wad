@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Songs</title>
+</head>
+<body>
+  <h1>Total Songs: <%= count %></h1>
+
+  <!-- Song Table -->
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>Song</th>
+      <th>Film</th>
+      <th>Music Director</th>
+      <th>Singer</th>
+      <th>Actor</th>
+      <th>Actress</th>
+      <th>Action</th>
+    </tr>
+    <% songs.forEach(song => { %>
+      <tr>
+        <td><%= song.Songname %></td>
+        <td><%= song.Film %></td>
+        <td><%= song.Music_director %></td>
+        <td><%= song.Singer %></td>
+        <td><%= song.Actor || '-' %></td>
+        <td><%= song.Actress || '-' %></td>
+        <td>
+          <form action="/delete/<%= song.Songname %>" method="get" style="display:inline;">
+            <button type="submit" onclick="return confirm('Delete <%= song.Songname %>?')">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+
+  <!-- Add Song Form -->
+  <h2>Add New Song</h2>
+  <form action="/add" method="POST">
+    <input type="text" name="Songname" placeholder="Song Name" required />
+    <input type="text" name="Film" placeholder="Film" required />
+    <input type="text" name="Music_director" placeholder="Director" required />
+    <input type="text" name="Singer" placeholder="Singer" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <!-- Update Actor & Actress -->
+  <h2>Update Actor & Actress</h2>
+  <form action="/update" method="POST">
+    <input type="text" name="Songname" placeholder="Song Name" required />
+    <input type="text" name="Actor" placeholder="Actor" required />
+    <input type="text" name="Actress" placeholder="Actress" required />
+    <button type="submit">Update</button>
+  </form>
+
+  <!-- Filter by Music Director -->
+  <h2>List Songs by Music Director</h2>
+  <form action="/director" method="GET">
+    <input type="text" name="name" placeholder="Music Director" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Filter by Director & Singer -->
+  <h2>List Songs by Director & Singer</h2>
+  <form action="/search-director-singer" method="GET">
+    <input type="text" name="dir" placeholder="Music Director" required />
+    <input type="text" name="singer" placeholder="Singer" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Filter by Film & Singer -->
+  <h2>List Songs by Film & Singer</h2>
+  <form action="/search-film-singer" method="GET">
+    <input type="text" name="film" placeholder="Film" required />
+    <input type="text" name="singer" placeholder="Singer" required />
+    <button type="submit">Search</button>
+  </form>
+</body>
+</html>

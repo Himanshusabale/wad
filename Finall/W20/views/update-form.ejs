@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Employee</title>
+</head>
+<body>
+    <h2>Update Employee - <%= employee.name %></h2>
+    <form action="/update/<%= employee._id %>" method="POST">
+        <input type="text" name="name" value="<%= employee.name %>">
+        <input type="text" name="department" value="<%= employee.department %>">
+        <input type="text" name="designation" value="<%= employee.designation %>">
+        <input type="text" name="salary" value="<%= employee.salary %>">
+        <input type="date" name="doj" value="<%= new Date(employee.doj).toISOString().split('T')[0] %>">
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

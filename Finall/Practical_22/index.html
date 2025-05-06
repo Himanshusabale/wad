@@ -1,0 +1,97 @@
+<!-- 2 Create a simple mobile website using jQuery Mobile for your college – Pune
+Institute of Computer Technology (PICT). Include static pages like:
+• About Us
+• Courses Offered
+• Departments
+• Contact Information
+Use jQuery Mobile’s navigation bar, collapsible content, and page
+transitions.
+C22 Design and develop Student Management System using Salesforce Cloud. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PICT Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script> 
+
+  <style>
+    /* Add Background Image to the Home Page */
+    #home {
+      background-image: url('images/pict.jpg'); /* Replace with your local image file */
+      background-size: cover;
+      background-position: center center;
+      color: white; /* Text color on top of the background */
+    }
+
+    /* Optional: style for the header to make it readable */
+    
+  </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header"><h1>PICT</h1></div>
+
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#about" data-transition="slide">About</a></li>
+      <li><a href="#courses" data-transition="slide">Courses</a></li>
+      <li><a href="#departments" data-transition="slide">Departments</a></li>
+      <li><a href="#contact" data-transition="slide">Contact</a></li>
+    </ul>
+  </div>
+
+  <div data-role="content">
+    <h2>Welcome to PICT!</h2>
+    <p>Excellence in Education and Research.</p>
+  </div>
+</div>
+
+<!-- About Us Page -->
+<div data-role="page" id="about">
+  <div data-role="header"><h1>About Us</h1></div>
+  <div data-role="content">
+    <p>PICT, established in 1983, is a premier institute in IT and Computer Engineering.</p>
+  </div>
+</div>
+
+<!-- Courses Offered Page -->
+<div data-role="page" id="courses">
+  <div data-role="header"><h1>Courses</h1></div>
+  <div data-role="content">
+    <div data-role="collapsible">
+      <h4>Undergraduate</h4>
+      <p>B.E in Computer Engineering, IT, and E&TC</p>
+    </div>
+    <div data-role="collapsible">
+      <h4>Postgraduate</h4>
+      <p>M.E in Computer Engineering, IT, and VLSI.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Departments Page -->
+<div data-role="page" id="departments">
+  <div data-role="header"><h1>Departments</h1></div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <li>Computer Engineering</li>
+      <li>Information Technology</li>
+      <li>Electronics & Telecommunication</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Contact Information Page -->
+<div data-role="page" id="contact">
+  <div data-role="header"><h1>Contact</h1></div>
+  <div data-role="content">
+    <p>PICT, Dhankawadi, Pune - 411043<br>Phone: (020) 2437 1101</p>
+  </div>
+</div>
+
+</body>
+</html>

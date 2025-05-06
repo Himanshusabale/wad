@@ -1,0 +1,77 @@
+<!-- Develop a static mobile website using mobile JQuery showcasing PICT's B.E.
+course structure. Each year (FE, SE, TE, BE) should be a collapsible section
+listing subjects and brief descriptions.
+C26 Find a procedure to transfer two text files from one virtual machine to another
+virtual machine. Also, add some text in the file and display it before and after
+transfer on both the VMs. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PICT B.E. Structure</title>
+  <!-- jQuery Mobile CSS + JS -->
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script> 
+</head>
+<body>
+
+<div data-role="page" id="courses">
+  <div data-role="header" data-theme="b">
+    <h1>PICT B.E. Course Structure</h1>
+  </div>
+
+  <div data-role="content">
+    <div data-role="collapsibleset" data-inset="false">
+
+      <!-- First Year -->
+      <div data-role="collapsible">
+        <h3>First Year (FE)</h3>
+        <ul data-role="listview" data-inset="true">
+          <li>Mathematics I<br><small>Limits, derivatives & integrations</small></li>
+          <li>Physics<br><small>Mechanics & properties of matter</small></li>
+          <li>Chemistry<br><small>Organic & inorganic basics</small></li>
+          <li>Workshop Practice<br><small>Basic engineering tools & techniques</small></li>
+        </ul>
+      </div>
+
+      <!-- Second Year -->
+      <div data-role="collapsible">
+        <h3>Second Year (SE)</h3>
+        <ul data-role="listview" data-inset="true">
+          <li>Data Structures<br><small>Arrays, lists, trees & graphs</small></li>
+          <li>Discrete Mathematics<br><small>Logic, sets & combinatorics</small></li>
+          <li>OOP with Java<br><small>Classes, objects & inheritance</small></li>
+          <li>Digital Logic<br><small>Gates, flip-flops & state machines</small></li>
+        </ul>
+      </div>
+
+      <!-- Third Year -->
+      <div data-role="collapsible">
+        <h3>Third Year (TE)</h3>
+        <ul data-role="listview" data-inset="true">
+          <li>Microprocessors<br><small>8085 architecture & programming</small></li>
+          <li>Database Systems<br><small>ER-models, SQL & normalization</small></li>
+          <li>Operating Systems<br><small>Processes, scheduling & memory</small></li>
+          <li>Computer Networks<br><small>OSI model & TCP/IP basics</small></li>
+        </ul>
+      </div>
+
+      <!-- Final Year -->
+      <div data-role="collapsible">
+        <h3>Final Year (BE)</h3>
+        <ul data-role="listview" data-inset="true">
+          <li>Software Engineering<br><small>SDLC & design patterns</small></li>
+          <li>Artificial Intelligence<br><small>Search, learning & reasoning</small></li>
+          <li>Elective I<br><small>Choose advanced topic</small></li>
+          <li>Final Project<br><small>Team-based capstone project</small></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

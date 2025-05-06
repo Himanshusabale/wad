@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Total Employees : <%= total %></h2>
+    <h2>Add Employee</h2>
+    <form action="/create" method="post">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="department" placeholder="dept">
+        <input type="text" name="designation" placeholder="des">
+        <input type="text" name="salary" placeholder="salary">
+        <input type="text" name="doj" placeholder="doj">
+        <button type="submit"> Add employee</button>
+    </form>
+    <h3>Employee List</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Des</th>
+                <th>Salary</th>
+                <th>DOJ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% employee.forEach(e=> { %>
+                <tr>
+                    <td>
+                        <%= e.name %>
+                    </td>
+                    <td>
+                        <%= e.department %>
+                    </td>
+                    <td>
+                        <%= e.designation %>
+                    </td>
+                    <td>
+                        <%= e.salary %>
+                    </td>
+                    <td>
+                        <%= new Date(e.doj).toDateString() %>
+                    </td>
+                    <td>
+                        <a href="/delete/<%= e.name %>">Delete</a>
+                        <a href="/update/<%= e.name %>">Update</a>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>

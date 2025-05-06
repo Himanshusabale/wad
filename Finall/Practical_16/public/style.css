@@ -1,0 +1,19 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    margin: 50px;
+    background-color: pink;
+    
+}
+
+h1 {
+    color: darkred;
+}
+
+img {
+    border-radius: 10px;
+}
+
+ul {
+    text-align: center;
+}

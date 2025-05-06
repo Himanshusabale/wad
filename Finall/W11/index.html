@@ -1,0 +1,31 @@
+<!--Write a JavaScript Program to create a login(username, password) and
+registration form(name, email, mobile number, dob, city, address) and push to an
+array/local storage with the AJAX POST method and a data list in a new page.
+Add proper validations for each form element.
+C11 Find a procedure to transfer two text files from one virtual machine to another
+virtual machine. Also, add some text in the file and display it before and after
+transfer on both the VMs. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Register</h2>
+  <form id="registerForm" onsubmit="register(event)">
+    <input id="name" placeholder="Name" required><br>
+    <input id="email" type="email" placeholder="Email" required><br>
+    <input id="mobile" type="text" placeholder="Mobile" required ><br>
+    <input id="dob" type="date" required><br>
+    <input id="city" placeholder="City" required><br>
+    <input id="address" placeholder="Address" required><br>
+    <input id="username" placeholder="Username" required><br>
+    <input id="password" type="password" placeholder="Password" required><br>
+    <button type="submit">Register</button>
+  </form>
+  <p>Already registered? <a href="login.html">Login</a></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
