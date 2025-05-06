@@ -1,0 +1,12 @@
+<h1>Angular To-Do List</h1>
+
+<input [(ngModel)]="task" placeholder="Enter a task" />
+<button (click)="addTask()">{{ editingIndex !== null ? 'Update' : 'Add' }} Task</button>
+
+<ul>
+  <li *ngFor="let t of tasks; index as i">
+    {{ t }}
+    <button (click)="editTask(i)">Edit</button>
+    <button (click)="deleteTask(i)">Delete</button>
+  </li>
+</ul>
